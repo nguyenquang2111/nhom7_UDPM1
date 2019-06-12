@@ -54,22 +54,23 @@
         <div>
         	<?php include('connect.php');?>
 			<?php
-				$sql="select * from sanpham";
+				$sql="select * from cuahangnu";
 				$thucthi=mysqli_query($conn,$sql);
 				while ($row=mysqli_fetch_array($thucthi))
 				{
-					$code=$row['code'];
-					$ten=$row['name'];
-					$img=$row['image'];
-					$gia=$row['price'];
+					$id=$row['id'];
+					$name=$row['name'];
+					$img=$row['img'];
+					$price=$row['price'];
+					$amount=$row['amount'];
 			?>
-    		 <div style="float:left">
-       		  	<img src="img/<?php echo $img;?>" alt="" width="100px" height="50px">
-         		<p><b>Mã sản phẩm: <?php echo $code;?> </b></p>
-        	 	<p><b>Tên sản phẩm: <?php echo $ten;?> </b></p>
-         		<p><b>Giá: <?php echo $gia;?>.000đ </b></p>
-         		<a href="giohang.php?MaSP=<?php echo $row['code'];?>"> Mua hàng</a>
-         		<a href"'#"> Chi tiết</a>
+    		 <div style="float:left; padding-left:30px">
+       		  	<img src="adidas/<?php echo $img;?>" alt="" width="200px" height="auto">
+         		<p><b>Mã sản phẩm: <?php echo $id;?> </b></p>
+        	 	<p><b>Tên sản phẩm: <?php echo $name;?> </b></p>
+         		<p><b>Giá: <?php echo $price;?>.000đ </b></p>
+         		<a href="giohang2.php?Masp=<?php echo $row['id'];?>">Mua hàng</a>
+         		<a href="chitiet2.php?Masp=<?php echo $row['id'];?>">Chi tiết</a>
       </div>
         <?php }?>
         </div>

@@ -32,8 +32,8 @@
                     <td><input width="100px" type="text" name="email"></td>
                 </tr>
                 <tr>
-                	<td>Mật khẩu</td>
-                    <td><input width="100px" height="30px" type="password" name="mk"></td>
+                	<td>Password</td>
+                    <td><input width="100px" height="30px" type="password" name="pass"></td>
                 </tr>
                 <tr>
                     <td><input type="submit" name="ok" value="đăng nhập"></td>
@@ -45,10 +45,11 @@
 			include('connect.php');
 			if(isset($_POST['ok']))
 					{$email=$_POST['email'];
-					$mk=$_POST['mk'];
-				$query="select * from dangky where email='$email' and mk='$mk'";
+						$pass=$_POST['pass'];
+				$query="select * from dangky where email='$email' and pass='$mk'";
 				$result=mysqli_query($conn,$query);
 				$count=mysqli_num_rows($result);
+				if($count);
 			header("location:index.php");
 			 echo "Thanh cong"; }
 			else{echo "<p>dang nhap khong thanh cong</p>";}

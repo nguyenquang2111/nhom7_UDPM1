@@ -30,10 +30,10 @@
     </div>
     <div class="tmt">
     	<div id="giay">
-        	<b><img width="400px" height="auto" src="adidas/utraboot.jpg"><br>
+        	<b><img width="400px" height="auto" src="adidas/utraboot.jpg"></<br>
            	<span style="font-size:24px; padding-left:150px"> Phân loại</span><br>
             
-            <a href="123"><img width="200px" height="auto" src="adidas/nut.png"></a>
+           <a href="timhieuthem.php"><img width="200px" height="auto" src="adidas/nut.png"></a>
          </div>
     </div>
     <div class="banner2">

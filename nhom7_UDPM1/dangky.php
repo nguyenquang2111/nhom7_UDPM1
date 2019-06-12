@@ -28,20 +28,24 @@
     	<form method="post" enctype="multipart/form-data">
         	<table cellpadding="0px" cellspacing="0px" style="margin:auto; color:#F00; font-size:24px; padding-top:80px">
             	<tr>
+                	<td>Name:</td>
+                    <td><input width="100px" type="text" name="name"></td>
+                </tr>
+            	<tr>
                 	<td>Email:</td>
                     <td><input width="100px" type="text" name="email"></td>
                 </tr>
                 <tr>
                 	<td>Mật khẩu</td>
-                    <td><input width="100px" height="30px" type="password" name="mk"></td>
+                    <td><input width="100px" height="30px" type="password" name="pass"></td>
                 </tr>
                 <tr>
-                	<td>Nhập lại MK</td>
-                    <td><input width="100px" height="30px" type="password" name="nlmk"></td>
+                	<td>Số điện thoại</td>
+                    <td><input width="100px" height="30px" type="text" name="phone"></td>
                 </tr>
                 <tr>
-                	<td>Bạn đã trên 13 tuổi ?</td>
-                    <td><input type="checkbox" name="ghichu"></td>
+                	<td>Địa chỉ</td>
+                    <td><input type="text" name="address"></td>
                 </tr>
                 <tr>
                     <td><input type="submit" name="ok" value="đăng ký"></td>
@@ -51,15 +55,18 @@
     </div>
     	<?php 
 			include('connect.php');
-			if(isset($_POST['submit']))
+			if(isset($_POST['ok']))
+				{
+				$name=$_POST['name'];
 				$email=$_POST['email'];
-				$mk=$_POST['mk'];
-				$nlmk=$_POST['nlmk'];
-			$sql="insert into dangky(email,mk,nlmk) values('$email','$mk','$nlmk')";
+				$mk=$_POST['pass'];
+				$sdt=$_POST['phone'];
+				$dc=$_POST['address'];
+			$sql="insert into dangky(name,email,pass,phone,address) values('$name','$email','$mk','$sdt','$dc')";
 			$thucthi=mysqli_query($conn,$sql);
 			if($thucthi)
 			echo "thanh cong";
-			else echo "that bai";
+			else echo "that bai";}
 		?>
     <marquee direction="left" style="font-size:36px; font-family:Tahoma, Geneva, sans-serif;">Chúng tôi cam kết giầy chuẩn ISO 9001-2008</marquee>
     <div class="ket">

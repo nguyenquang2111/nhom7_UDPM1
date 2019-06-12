@@ -50,50 +50,27 @@
                     </ul></li>
             </ul>
         </div>
-        <div>
-        	<?php include('connect.php');?>
+			<?php include('connect.php');?>
 			<?php
-				$sql="select * from cuahangnam";
+				$sql="select * from muahang";
 				$thucthi=mysqli_query($conn,$sql);
 				while ($row=mysqli_fetch_array($thucthi))
-				{
-					$id=$row['id'];
-					$name=$row['name'];
-					$img=$row['img'];
-					$price=$row['price'];
-					$amount=$row['amount'];
+					{
+						$id=$row['id'];
+						$name=$row['name'];
+						$img=$row['img'];
+						$price=$row['price'];
+						$amount=$row['amount'];
 			?>
-    		 <div style="float:left; padding-left:30px">
-       		  	<img src="adidas/<?php echo $img;?>" alt="" width="200px" height="auto">
-         		<p><b>Mã sản phẩm: <?php echo $id;?> </b></p>
-        	 	<p><b>Tên sản phẩm: <?php echo $name;?> </b></p>
-         		<p><b>Giá: <?php echo $price;?>.000đ </b></p>
-         		<a href="giohang1.php?Masp=<?php echo $row['id'];?>"> Mua hàng</a>
-         		<a href="chitiet1.php?Masp=<?php echo $row['id'];?>"> Chi tiết</a>
-      </div>
+    			 <div style="float:left; padding-left:30px">
+        			<img src="adidas/<?php echo $img;?>" alt="" width="200px" height="auto">
+         			<p><b>Mã sản phẩm: <?php echo $id;?> </b></p>
+         			<p><b>Tên sản phẩm: <?php echo $name;?> </b></p>
+         			<p><b>Giá: <?php echo $price;?>.000đ </b></p>
+        			<a href="giohang.php?Ma=<?php echo $row['id'];?>"> Mua hàng</a>
+         			<a href"'#"> Chi tiết</a>
+     			 </div>
         <?php }?>
-        </div>
-    </div>
-      <div class="ket">
-    	<table border="1px" cellpadding="0px" cellspacing="0px">
-        	<tr>
-            	<td><span>Hỗ trợ</span><br>
-                	<pre>cứu giúp</pre><br>
-                   <pre> trả lại và hoàn tiền</pre><br></td>
-                <td><span>Thông tin công ty</span><br>
-                	<pre>về chúng tôi</pre><br>
-                    <pre>Nghề nghiệp</pre><br>
-                </td>
-                <td><span>Riêng tư & điều khoản</span><br>
-                	<pre>Quyền riêng tư và bảo mật</pre><br>
-                   <pre> Các điều khoản và điều kiện khác</pre><br>
-                </td>
-                <td><span>Quà tặng</span><br>
-                	<pre>Kiểm tra số dư</pre><br>
-                </td>
-            </tr>
-        </table>
-    </div>
 </div>
 </body>
 </html>
