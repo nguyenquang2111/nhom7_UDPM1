@@ -54,23 +54,62 @@
         	<?php include'connect.php'?>
             <?php
    			$id=$_GET['Masp'];
-     		$sql="select * from cuahangnam where id='$id'";
+     		$sql="select * from muahang where id='$id'";
 	 		$thucthi=mysqli_query($conn,$sql);
 	 		$row=mysqli_fetch_array($thucthi);
     	?>
         	<table>
         		<tr>
-                <td><img src="adidas/<?php echo $row['img'];?>" alt="" width="500px" height="auto"></td>
+                <td><img src="adidas/<?php echo $row['img'];?>" alt="" width="300px" height="auto"></td>
            
-				<td style="font-size:24px; font-weight:bold; padding-top:350px; color:#00F">MÃ: <?php echo $row['id'];?><br>
+				<td style="font-size:24px; font-weight:bold; padding-top:350px; color:#000">MÃ: <?php echo $row['id'];?><br>
        				Tên sản phẩm: <?php echo $row['name'];?><br>
                     Giá bán: <?php echo $row['price'];?><br>
-                	Số lượng: <?php echo $row['amount'];?>
-                    <a href="giohang1.php?Masp=<?php echo $row['id'];?>">giỏ hàng</a></td>
+                	Số lượng: <?php echo $row['amount'];?><br>
+                    <a href="giohang.php?Masp=<?php echo $row['id'];?>">giỏ hàng</a></td>
                 </tr>
             </table>
             
         </div>
+        <div class="ket">
+    	<table  cellpadding="0px" cellspacing="0px">
+        	<tr>
+            	<td><span>Hỗ trợ</span><br>
+                	<pre>Cứu giúp</pre><br>
+                    <pre>Trả lại và hoàn tiền</pre><br></td>
+                <td><span>Thông tin công ty</span><br>
+                	<pre>Về chúng tôi</pre><br>
+                    <pre>Nghề nghiệp</pre><br>
+                </td>
+                <td><span>Riêng tư</span><br>
+                	<pre>Quyền riêng tư</pre><br>
+                    <pre>Bảo mật</pre><br>
+                </td>
+                <td><span>Điều khoản</span><br>
+                    <pre>Các điều khoản </pre><br>
+                    <pre>Điều kiện khác</pre><br>
+                </td>
+                <td><span>Quà tặng</span><br>
+                	<pre>Kiểm tra số dư</pre><br>
+                    <pre>Kiểm tra đơn hàng</pre>
+                </td>
+            </tr>
+        </table>
+    </div>
+     <div class="cuoicung">
+    	<table>
+        	<tr>
+        		<td>
+    				<pre>hotline:0981921695</pre>
+        			<pre>address:Hà Nội</pre>
+                </td>
+            	<td>
+        			<pre>email:nguyenquang21111999@gmail.com</pre>
+        			<pre>fax:nguyenquang</pre>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
 </body>
 </html>

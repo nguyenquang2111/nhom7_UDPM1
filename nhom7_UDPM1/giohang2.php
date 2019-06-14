@@ -50,17 +50,18 @@
                     </ul></li>
             </ul>
         </div>
-		<form method="post" enctype="multipart/form-data">
-			<table border="1" bgcolor="#66FFFF">
-				<tr><td colspan="6" align="center"> GIỎ HÀNG </td></tr>
-  				<tr>
-      				<td>Mã sản phẩm</td>
-     				<td>Tên sản phẩm</td>
-      				<td>Ảnh sản phẩm</td>
-      				<td>Giá sản phẩm</td>
-     				<td>Số lượng</td>
-      				<td></td>
-   				</tr>
+        <div class="dd">
+            <form method="post" enctype="multipart/form-data">
+                <table border="1" bgcolor="#66FFFF">
+                    <tr><td colspan="6" align="center"> GIỎ HÀNG </td></tr>
+                    <tr>
+                        <td>Mã sản phẩm</td>
+                        <td>Tên sản phẩm</td>
+                        <td>Ảnh sản phẩm</td>
+                        <td>Giá sản phẩm</td>
+                        <td>Số lượng</td>
+                        <td></td>
+   					</tr>
                 <?php include('connect.php');?>
   		 <?php
    			$id=$_GET['Masp'];
@@ -102,6 +103,49 @@
           	<?php 
 		    	if(isset($_POST['ok']))
 		   ?>
+           </td>
+           </tr>
+           </table>
+           </div>
+           <div class="ket">
+    	<table  cellpadding="0px" cellspacing="0px">
+        	<tr>
+            	<td><span>Hỗ trợ</span><br>
+                	<pre>Cứu giúp</pre><br>
+                    <pre>Trả lại và hoàn tiền</pre><br></td>
+                <td><span>Thông tin công ty</span><br>
+                	<pre>Về chúng tôi</pre><br>
+                    <pre>Nghề nghiệp</pre><br>
+                </td>
+                <td><span>Riêng tư</span><br>
+                	<pre>Quyền riêng tư</pre><br>
+                    <pre>Bảo mật</pre><br>
+                </td>
+                <td><span>Điều khoản</span><br>
+                    <pre>Các điều khoản </pre><br>
+                    <pre>Điều kiện khác</pre><br>
+                </td>
+                <td><span>Quà tặng</span><br>
+                	<pre>Kiểm tra số dư</pre><br>
+                    <pre>Kiểm tra đơn hàng</pre>
+                </td>
+            </tr>
+        </table>
+    </div>
+     <div class="cuoicung">
+    	<table>
+        	<tr>
+        		<td>
+    				<pre>hotline:0981921695</pre>
+        			<pre>address:Hà Nội</pre>
+                </td>
+            	<td>
+        			<pre>email:nguyenquang21111999@gmail.com</pre>
+        			<pre>fax:nguyenquang</pre>
+                </td>
+            </tr>
+        </table>
+    </div>
            
 </div>
 </body>
